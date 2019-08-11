@@ -15,8 +15,9 @@ setup(
     description=('A simple Keylogger for OS Linux'),
     long_description=func_read('README.md'),
     license='GPLv2',
+    platforms=['Linux'],
     packages=['KLplus'],
-    install_requires=['xlib'],
+    install_requires=['python-xlib>=0.25'],
     zip_safe=False,
     classifiers=[
         'Development Status :: 4 - Beta',

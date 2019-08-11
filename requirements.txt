@@ -1,1 +1,1 @@
-python3-xlib==0.15
+python-xlib>=0.25
