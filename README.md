@@ -5,6 +5,25 @@
 
 O KLplus é um Keylogger simples para OS Linux.
 
+### Guia de instalação:
+
+#### Requisitos:
+* OS Linux
+* PIP
+
+
+Instalar pacote diretamente deste repositório usando .whl (requer pacote [wheel](https://pypi.org/project/wheel/)) (Recomendado):  
+`pip install https://github.com/user/repository/archive/branch.whl`
+
+Ou usando GIT (egg):  
+`pip install git+https://github.com/danbros/KLplus.git#egg=KLplus`
+
+Ou zip:
+`pip install https://github.com/danbros/KLplus/archive/master.zip`
+
+
+Depois execute o script plus_kl.py
+
 
 ### Autoria e contribuições:
 
