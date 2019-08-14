@@ -3,26 +3,26 @@ from os.path import join, dirname
 
 
 base_dir = dirname(__file__)
-about = {}
+version_ = {}
 
-with open(join(base_dir, 'KLplus', '__about__.py')) as f:
-    exec(f.read(), about)
+with open(join(base_dir, 'KLplus', '_version')) as f:
+    exec(f.read(), version_)
 
 with open(join(base_dir, "README.rst")) as f:
     long_d = f.read()
 
 
 setup(
-    name = about['__name__'],
-    version = about['__version__'],
+    name = version_['__name__'],
+    version = version_['__version__'],
 
-    description = about['__summary__'],
+    description = version_['__summary__'],
     long_description = long_d,
-    license = about['__license__'],
-    url = about['__uri__'],
+    license = version_['__license__'],
+    url = version_['__uri__'],
 
-    author = about['__author__'],
-    author_email = about['__email__'],
+    author = version_['__author__'],
+    author_email = version_['__email__'],
 
     platforms = ['Linux'], # Somente para metadados
 

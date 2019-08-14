@@ -1,4 +1,4 @@
-# Arquivo para ser usado em setup
+# Arquivo com metadados para ser usado em setup.py
 
 __title__ = 'KLplus'
 __summary__ = 'Um Keylogger CLI para OS Linux baseado no principio KISS.'
@@ -10,4 +10,4 @@ __author__ = 'Dan Barros'
 __email__ = 'dpb4fun@gmail.com'
 
 __license__ = "GNU GPLv2"
-__copyright__ = f"Copyright 2019 {__author__}"
+__copyright__ = f"Copyright 2019, {__author__}"
