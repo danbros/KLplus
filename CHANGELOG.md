@@ -14,18 +14,25 @@ e este projeto adota o [Versionamento Semântico](https://semver.org/spec/v2.0.0
 * `Security` em caso de vulnerabilidades.
 
 
-## [0.1.1] -
+## [0.1.1] - 2019-08-14
 ### Added
 * Script __ main__.py para módulo se comportar como script.
 * CHANGELOG.md .
+* _ version.py contendo versão do pacote e metadados sobre o pacote
+* Docstrings aos scripts próprios deste pacote.
+
 
 ### Changed
-* Renomeado KLplus.py para klplus.py para diferenciar pacote do módulo.
+* KLplus.py renomeado para klplus.py, para diferenciar pacote do módulo.
+* Extensão de klplus para .pyw para executá-lo sem CLI visível.
 * Versão dos pacotes em requirements.txt e requirements_dev.txt definidos (congelados).
-* Configuração e designer do setup.py . 
+* Configuração e designer do setup.py .
+* README.md documentado do zero.
+* Adicionado suporte apenas à Python >= 3.6 .
 
 ### Fixed
 * Erro ao importar pyxhook em klplus.py (foi necessário importar do diretório pai).
+* Erro do setup.py ao ler README em formato .md
 
 ## [0.1.0] - 2019-08-11
 ### Added
@@ -38,5 +45,5 @@ e este projeto adota o [Versionamento Semântico](https://semver.org/spec/v2.0.0
 * Arquivo .gitignore.
 * Arquivo requirements.txt e requirements_dev.txt .
 
-[0.1.1]: h
+[0.1.1]: https://github.com/danbros/KLplus/releases/tag/v0.1.1
 [0.1.0]: https://github.com/danbros/KLplus/releases/tag/v0.1.0
