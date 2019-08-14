@@ -1,6 +1,6 @@
 # Arquivo com metadados para ser usado em setup.py
 
-__title__ = 'KLplus'
+__name__ = 'KLplus'
 __summary__ = 'Um Keylogger CLI para OS Linux baseado no principio KISS.'
 __uri__ = 'https://github.com/danbros/KLplus'
 

@@ -5,7 +5,7 @@ from os.path import join, dirname
 base_dir = dirname(__file__)
 version_ = {}
 
-with open(join(base_dir, 'KLplus', '_version')) as f:
+with open(join(base_dir, 'KLplus', '_version.py')) as f:
     exec(f.read(), version_)
 
 with open(join(base_dir, "README.rst")) as f:
@@ -31,9 +31,7 @@ setup(
     dependency_links = [
         'https://github.com/python-xlib/python-xlib/archive/0.25.tar.gz'
     ],
-    # dependency_links = [
-    #     'https://github.com/python-xlib/python-xlib/tarball/master#egg=python-xlib-0.25'
-    # ],
+    
     zip_safe = False,
 
     classifiers = [
