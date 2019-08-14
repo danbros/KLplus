@@ -8,7 +8,7 @@ version_ = {}
 with open(join(base_dir, 'KLplus', '_version.py')) as f:
     exec(f.read(), version_)
 
-with open(join(base_dir, "README.rst")) as f:
+with open(join(base_dir, "README.md")) as f:
     long_d = f.read()
 
 
@@ -18,6 +18,7 @@ setup(
 
     description = version_['__summary__'],
     long_description = long_d,
+    long_description_content_type="text/markdown",
     license = version_['__license__'],
     url = version_['__uri__'],
 
@@ -39,13 +40,12 @@ setup(
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Intended Audience :: End Users/Desktop',
-        'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
         'Natural Language :: Portuguese (Brazilian)',
         'Operating System :: POSIX :: Linux',
-        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: Implementation :: CPython'
+        'Programming Language :: Python :: Implementation :: CPython',
         'Topic :: System :: Monitoring',
-        'Topic :: System :: Logging',
+        'Topic :: System :: Logging'
     ]
 )
