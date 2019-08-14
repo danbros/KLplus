@@ -1,7 +1,10 @@
 # KLplus
 
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-green.svg)](/LICENSE)&nbsp; &nbsp;
-[![Python 3.x](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://github.com/danbros/KLplus/blob/release-0.1.1/LICENSE)
+[![Python 3.6](https://img.shields.io/badge/Python-3.6-red.svg)](https://www.python.org/downloads/)
+[![Maintenance yes](https://img.shields.io/badge/Mantido%3F-yes-green.svg)](https://github.com/danbros/KLplus/graphs/commit-activity)
+[![PyPI](https://img.shields.io/pypi/v/KLplus.svg?color=green&label=pypi%20release)](https://pypi.org/project/KLplus/#history)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/KLplus.svg?label=PyPi%20Downloads)
 
 Um [Keylogger](https://pt.wikipedia.org/wiki/Keylogger) CLI para OS Linux baseado no principio [KISS](https://pt.wikipedia.org/wiki/Princ%C3%ADpio_KISS).<br>
 
@@ -22,7 +25,7 @@ O objetivo deste pacote é entregar um keylogger minimalista, configurável por 
 
 #### Requisitos:
 
-Para executar este aplicativo você precisa de um interpretador [Python 3](https://www.python.org/downloads/) disponivel em seu OS Linux.  
+Para executar este aplicativo você precisa de um interpretador [Python 3.6+](https://www.python.org/downloads/) disponivel em seu OS Linux.  
 Para obter uma lista dos interpretadores Python do seu sistema, digite no Shell:
 ```Shell
 $ ls -1 /usr/bin/python* | grep '[2-3].[0-9]$'
@@ -30,6 +33,11 @@ $ ls -1 /usr/bin/python* | grep '[2-3].[0-9]$'
 $ find /usr/bin/python* ! -type l
 # Ou isso no caso de estar usando ambientes virtuais
 $ whereis python
+```
+Você pode instalar o Python com:
+```Shell
+# OS Debian/Ubuntu
+$ sudo apt-get -y install python3.7
 ```
 
 
@@ -80,11 +88,10 @@ Ou faça `pip show KLplus` e olhe para `Location`.
 
 ### Autoria e contribuições
 
-[**pyxhook.py**](KLplus/pyxhook.py)  
+[**pyxhook.py**](https://github.com/danbros/KLplus/blob/release-0.1.1/KLplus/pyxhook.py)  
 * Uma implementação do [**pyHook**](https://pypi.org/project/pyHook/) (Windows) para sistemas Linux.  Clonado do repositório de [JeffHoogland](https://github.com/JeffHoogland/pyxhook), é um pedaço do código fonte de [**Simple Python Keylogger**](https://sourceforge.net/projects/pykeylogger/), sob licença GPL v2.
 
 
-
 ### Licença
-* [Licença GNU GPLv2](LICENSE)
+* [Licença GNU GPLv2](https://github.com/danbros/KLplus/blob/release-0.1.1/LICENSE)
 * Copyright 2019, Dan Barros.
