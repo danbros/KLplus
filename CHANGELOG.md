@@ -14,6 +14,12 @@ e este projeto adota o [Versionamento Semântico](https://semver.org/spec/v2.0.0
 * `Security` em caso de vulnerabilidades.
 
 
+## [0.1.2] - 2019-08-16
+### FIxed
+* Erro no arquivo .whl (arquivo faltando por ter extensão .pyw).
+* Erro ao invocar módulo como script (sintaxe error).
+
+
 ## [0.1.1] - 2019-08-14
 ### Added
 * Script __ main__.py para módulo se comportar como script.
@@ -45,5 +51,6 @@ e este projeto adota o [Versionamento Semântico](https://semver.org/spec/v2.0.0
 * Arquivo .gitignore.
 * Arquivo requirements.txt e requirements_dev.txt .
 
+[0.1.2]: https://github.com/danbros/KLplus/releases/tag/v0.1.2
 [0.1.1]: https://github.com/danbros/KLplus/releases/tag/v0.1.1
 [0.1.0]: https://github.com/danbros/KLplus/releases/tag/v0.1.0

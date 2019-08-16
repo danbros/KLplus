@@ -1,7 +1,7 @@
 # KLplus
 
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://github.com/danbros/KLplus/blob/release-0.1.1/LICENSE)
-[![Python 3.6](https://img.shields.io/badge/Python-3.6-red.svg)](https://www.python.org/downloads/)
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://github.com/danbros/KLplus/blob/master/LICENSE)
+[![Python 3.6](https://img.shields.io/badge/Python-3.6+-red.svg)](https://www.python.org/downloads/)
 [![Maintenance yes](https://img.shields.io/badge/Mantido%3F-yes-green.svg)](https://github.com/danbros/KLplus/graphs/commit-activity)
 [![PyPI](https://img.shields.io/pypi/v/KLplus.svg?color=green&label=pypi%20release)](https://pypi.org/project/KLplus/#history)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/KLplus.svg?label=PyPi%20Downloads)
@@ -57,7 +57,7 @@ $ python3 -m pip install KLplus
 Ou:
 ```Shell
 # Clonar este repositório e instalar (necessário wheel):
-$ pip install https://github.com/danbros/KLplus/releases/download/0.1.1/KLplus-0.1.1-py3-none-any.whl
+$ pip install https://github.com/danbros/KLplus/releases/download/v0.1.2/KLplus-0.1.1-py3-none-any.whl
 ```
 
 Alternativas:
@@ -72,10 +72,14 @@ $ pip install https://github.com/danbros/KLplus/archive/master.zip
 
 ### Configurando
 
-Voçê pode iniciar o keylogger com:  
+Voçê pode iniciar o keylogger do terminal com:  
 ```Shell
-$ python3 -m KLplus
+$ python -m KLplus & disown -h %1
 ```
+Assim ele é executado em segundo plano, podendo fechar o terminal
+sem destruir seu processo.
+
+<br>
 
 Ele captura todas as teclas digitadas até que o comando de saída seja pressionado (F12), e então finaliza.
 
